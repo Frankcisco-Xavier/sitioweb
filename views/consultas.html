@@ -1,0 +1,33 @@
+$def with (datos)
+<html>
+    <head></head>
+    <body>
+         <p><center><H1>Secretaria de Turismo </h1></center></p>
+         <p><center><H1> MAPEO DE INFORMACION</h1></center></p>
+         <h1>---------------------------------------------------</h1>
+         <center>
+<iframe width="100%" height="520" frameborder="0" src="https://frankcisco-xavier.carto.com/viz/6b57ba12-bd0c-11e6-8143-0ecd1babdde5/embed_map" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+
+<P>                    </P>
+<p><h1>Registros de los Estados Mas visitados</h1></p>
+<h1>---------------------------------------------------</h1>
+<table border="2px" bordercolor="blue" ALIGN=center>
+            <tr>
+                <td ><strong>N°</strong></td>
+                <td ><strong><center>Destino</strong></td>
+                <td ><strong><center>Periodo</strong></td>
+                <td ><strong>Visitantes</strong></td>
+                <td ><strong>Nacional</strong></td>
+                <td ><strong>Internacional</strong></td>
+                <td ><strong>Porcentaje Ocupacion</strong></td>
+                <td ><strong>Ocupacion Cuartos</strong></td>
+                </tr>
+            $ contador=0 
+            $for row in datos:
+            <tr>
+                <td>$contador<td>$row['Destino']<td>$row['Periodo']<td>$row['Visitantes']<td>$row['Nacional']<td>$row['Internacional']<td>$row['Porcentaje Ocupacion promedio']<td>$row['Oferta hotelera cuartos']</td></td></td></td></td></td></td></td>
+                $ contador += 1
+                </tr>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+$def with (posts)
+<CENTER><img src="../static/images/Mexicoi.png" class="img-rounded" ></CENTER>
+<CENTER><h1>Vive el Turismo</h1></CENTER>
+<H3>PUEBLOS MAGICOS Contacto:</H3>
+<CENTER>
+    <p> </p>
+<!--Muestra los datos registrados en las tablas app -->
+<table class="table table-hover">
+  <!-- Aplicadas en las filas -->
+  <td class="active">N°</td>
+  <td class="success">PUEBLOS MAGICOS</td>
+  <td class="warning">TELEFONO</td>
+  <td class="danger">E-MAIL</td>
+  <td class="active">ACTUALIZACION</td>
+  
+ 
+  <!-- Aplicadas en las celdas (<td> o <th>) -->
+$for post in posts:
+  <tr>
+    <td class="active"><a href="/view/$post.id_contacto">$post.id_contacto</a></td>
+    <td class="danger">$post.nombre</td>
+    <td class="success">$post.telefono</td>
+    <td class="warning">$post.email</td>
+    <td class="danger">$post.fecha_actuliz</td>
+   <!--  <td class="active"><a href="/edit/$post.id_contacto">Edit</a></td>-->
+        
+        
+</CENTER>

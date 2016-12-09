@@ -1,0 +1,68 @@
+$def with (bariavle)
+
+<script type = "text/javascript">
+function validate() {
+    var un = document.myform.username.value;
+    var pw = document.myform.pword.value;
+    var valid = false;
+    var usuarios = ['frank','Salvador'];
+    var contraceñas = ['frank','Salvador']; 
+    for (var i=0; i <usuarios.length; i++) 
+    {
+        if ((un == usuarios[i]) && (pw == contraceñas[i])) {
+            valid = true;
+            break;
+            }
+    }
+    if (valid) 
+    {
+        alert ("Bienvenido al siatema espere un momento porfavor");
+        window.location = "/cuentas";
+        return false;
+    }else{ 
+        alert ("Error en Usuario o Contraseña.");
+    
+        }
+            }
+</script>
+<form name = "myform">
+<body role="login">
+<div class="container" style="margin-top:100px">
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+    <div class="panel panel-default">
+    
+      <div class="panel-body">
+        <form role="form" action="#" method="POST">
+          <fieldset>
+            <div class="row">
+              <div class="center-block"> <h3>Bienvenido Inicia secion:</h3></div>
+              <hr>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-10  col-md-offset-1 ">
+                <div class="form-group">
+                <label>Usuario:</label>
+                  <div class="input-group"> <span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i> </span>
+                    <input class="form-control" placeholder="Username" type="text" name="username" autofocus>
+                  </div>
+                </div>
+                <div class="form-group">
+                 <label>Contraceña:</label>
+                  <div class="input-group"> <span class="input-group-addon"> <i class="glyphicon glyphicon-lock"></i> </span>
+                    <input class="form-control" placeholder="Password" type="password" name="pword" value="">
+                  </div>
+                </div>
+               
+                <div class="form-group">
+                 <label>
+                  <input type="button" value="Inisiar" name="Submit" onclick= "validate()">
+
+                </div>
+               
+              </div>
+            </div>
+           
+          </fieldset>
+        </form>
+    

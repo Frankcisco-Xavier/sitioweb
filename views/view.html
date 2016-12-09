@@ -1,0 +1,22 @@
+$def with (post)
+
+<h1>$post.nombre</h1>
+<p>Editado:$datestr(post.fecha_actuliz)</p>
+<p>Caseta de Turismo:$post.telefono<p>
+
+<table class="table table-hover">
+  <!-- Aplicadas en las filas -->
+  <td class="active">Email Turismo</td>
+  <td class="success">Informacion</td>
+  <td class="warning">Sitio web</td>
+  <td class="danger">Guia Turistico</td>
+  <td class="active">Telefono del Guia</td>
+  
+ 
+  <!-- Aplicadas en las celdas (<td> o <th>) -->
+  <tr>
+    <td class="active">$post.email</td>
+    <td class="danger">$post.informacion</td>
+    <td class="success">$post.sitio_web</td>
+    <td class="warning">$post.guia_turistico</td>
+    <td class="danger">$post.telefono_guia</td>
